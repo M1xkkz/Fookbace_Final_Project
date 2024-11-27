@@ -22,6 +22,7 @@ body {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ Navbar ดูแยกออก */
+    height: 60px;
 }
 
 .navbar + .flash-messages,

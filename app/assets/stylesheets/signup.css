@@ -51,10 +51,12 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    margin-left: 180px;
   }
   
   .signup-container input[type="submit"]:hover {
     background-color: rgb(207, 85, 85);
+    
   }
   
   .signup-container .back-link {

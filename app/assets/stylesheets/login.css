@@ -13,12 +13,14 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
   }
   
   .login-container h1 {
     text-align: center;
     color: rgb(238, 102, 102);
     margin-bottom: 20px;
+   
   }
   
   .login-container form {
@@ -33,24 +35,28 @@ body {
   }
   
   .login-container input[type="email"],
-  .login-container input[type="password"] {
+.login-container input[type="password"] {
     width: 100%;
+    max-width: 350px; /* กำหนดขนาดที่แน่นอนให้ช่องใส่ข้อมูล */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-  }
+    box-sizing: border-box; /* รวม padding และ border ในขนาด width */
+}
   
-  .login-container input[type="submit"] {
-    background-color: rgb(238, 102, 102);
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-  }
+.login-container input[type="submit"] {
+  background-color: rgb(238, 102, 102);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 160px;
+}
+
   
   .login-container input[type="submit"]:hover {
     background-color: rgb(206, 89, 89);
