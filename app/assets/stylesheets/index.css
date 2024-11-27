@@ -1,0 +1,142 @@
+/* posts.css */
+
+/* ตั้งค่ารูปแบบพื้นฐานสำหรับโพสต์ */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(238, 102, 102);
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+  
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* การค้นหาของโพสต์ */
+form {
+    margin-bottom: 20px;
+}
+  
+form div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+  
+
+
+/* การแสดงโพสต์ */
+.post {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative; /* เพิ่ม position สำหรับจัดตำแหน่งปุ่ม */
+}
+
+/* การจัดตำแหน่งปุ่ม Edit และ Delete */
+.post .post-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* ปุ่ม Edit และ Delete */
+.post .post-actions .edit-btn {
+    background-color: #4267b2;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.post .post-actions .edit-btn:hover,
+.post .post-actions .delete-btn:hover {
+    background-color: #365899;
+}
+
+/* ปุ่ม Like */
+.post .like-btn {
+    background-color: #4267b2;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.post .like-btn:hover {
+    background-color: #365899;
+}
+
+/* รูปแบบของคอมเมนต์ */
+ul.comments {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+  
+ul.comments li {
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+  
+ul.comments li strong {
+    color: #4267b2;
+    font-weight: bold;
+}
+
+/* ฟอร์มคอมเมนต์ */
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+  
+.comment-form input[type="submit"] {
+    background-color: #4267b2;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.comment-form input[type="submit"]:hover {
+    background-color: #365899;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+

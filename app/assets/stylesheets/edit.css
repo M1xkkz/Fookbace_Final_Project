@@ -1,0 +1,74 @@
+/* edit_post.css */
+
+/* ตั้งค่าหัวเรื่อง */
+#edit-post-page h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4267b2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* การจัดรูปแบบฟอร์ม */
+#edit-post-page form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#edit-post-page form div {
+    margin-bottom: 15px;
+}
+
+#edit-post-page form label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#edit-post-page form input[type="text"],
+#edit-post-page form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#edit-post-page form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#edit-post-page form input[type="submit"] {
+    background-color: #4267b2;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#edit-post-page form input[type="submit"]:hover {
+    background-color: #365899;
+}
+
+/* ลิงค์ "Back" */
+#edit-post-page a {
+    display: inline-block;
+    background-color: #f02849;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#edit-post-page a:hover {
+    background-color: #d0263f;
+}

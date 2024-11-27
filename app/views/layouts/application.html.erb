@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fookbace_101</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "newpost", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "login", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "signup", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "index", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "edit", "data-turbo-track": "reload" %>
+
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+          <%= link_to "🐼Fookbace", root_path, class: "brand" %>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+          <% if logged_in? %>
+            
+
+            <!-- Welcome Message -->
+            <span class="welcome-message">Welcome, <%= current_user.name %>!</span>
+
+            <!-- Search Form -->
+            <div class="search-form">
+              <%= form_with(url: posts_path, method: :get, local: true) do |f| %>
+                
+                <%= f.text_field :search, placeholder: "Enter post title", class: "search-field" %>
+                <%= f.submit "Search", class: "search-btn" %>
+              <% end %>
+            </div>
+
+
+
+            <!-- New Post Button -->
+            <%= link_to "New Post", new_post_path, class: "nav-btn new-post" %>
+
+            <!-- Logout Button -->
+            <%= button_to "Logout", logout_path, method: :delete, class: "nav-btn logout-btn" %>
+          <% else %>
+            <!-- Guest Actions -->
+            <div class="guest-actions">
+              <%= link_to "Login", login_path, class: "nav-btn" %>
+              <%= link_to "Sign Up", signup_path, class: "nav-btn" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
+    <div class="flash-messages">
+      <% if flash[:notice] %>
+        <p class="flash notice"><%= flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p class="flash alert"><%= flash[:alert] %></p>
+      <% end %>
+    </div>
+
+    <main class="content">
+      <%= yield %>
+    </main>
+  </body>
+</html>

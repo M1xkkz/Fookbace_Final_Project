@@ -1,0 +1,75 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  .new-post-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .new-post-container h1 {
+    text-align: center;
+    color: #4267b2;
+    margin-bottom: 20px;
+  }
+  
+  .new-post-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .new-post-container label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .new-post-container input[type="text"],
+  .new-post-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .new-post-container textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .new-post-container input[type="submit"] {
+    background-color: #4267b2;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .new-post-container input[type="submit"]:hover {
+    background-color: #365899;
+  }
+  
+  .new-post-container .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #4267b2;
+    text-decoration: none;
+  }
+  
+  .new-post-container .back-link:hover {
+    text-decoration: underline;
+  }
+  

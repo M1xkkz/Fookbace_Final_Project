@@ -1,0 +1,167 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    height: 100%; /* เพิ่มให้ body มีความสูงเต็มจอ */
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    position: fixed; /* ทำให้ Navbar ยึดอยู่ด้านบน */
+    top: 0;
+    left: 0;
+    width: 100%; /* ความกว้างเต็มจอ */
+    z-index: 1000; /* ให้ Navbar อยู่ด้านหน้าขององค์ประกอบอื่น */
+    background-color: rgb(238, 102, 102);
+    color: #fff;
+    padding: 1px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ Navbar ดูแยกออก */
+}
+
+.navbar + .flash-messages,
+.navbar + .content {
+    margin-top: 60px; /* ระยะห่างเท่ากับความสูงของ Navbar */
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo .brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 60px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 15px; /* ระยะห่างระหว่างส่วนต่าง ๆ */
+}
+
+.welcome-message {
+    margin-left: 20px; /* เว้นระยะระหว่าง Welcome กับ Fookbace */
+}
+
+.new-post {
+    margin-right: 20px; /* เว้นระยะห่างจาก logout */
+    border: 2px solid green; /* ใส่กรอบสีเขียว */
+    padding: 20px; /* เพิ่มช่องว่างภายในกรอบให้สวยงาม */
+    background-color: green;
+}
+
+.logout-btn {
+    border: 2px solid rgb(220, 7, 7); /* ใส่กรอบสีแดง */
+    padding: 10px; /* เพิ่มช่องว่างภายในกรอบให้สวยงาม */
+    background-color: rgb(220, 7, 7);
+    font-size: 17px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background-color: #d0263f;
+}
+
+.guest-actions {
+    margin-left: auto; /* ดัน Guest Actions ไปขวาสุด */
+    display: flex;
+    gap: 15px; /* ระยะห่างระหว่างปุ่ม */
+}
+
+.nav-links .nav-btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    margin-right: 50px;
+}
+
+.nav-links .nav-btn:hover {
+    background-color: rgb(213, 89, 89);
+}
+
+.flash-messages {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.flash {
+    padding: 10px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.flash.notice {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.content {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* เพิ่มการจัดกลางในแนวนอน */
+    gap: 10px;
+    margin-top: 20px; /* เว้นระยะห่างจากด้านบน */
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-label {
+    font-size: 14px;
+    color: white;
+}
+
+.search-field {
+    padding: 5px 20px; /* เพิ่ม padding ให้ช่องค้นหามีขนาดเท่ากับปุ่ม */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 20px; /* กำหนดความสูงให้เหมือนกับปุ่ม */
+}
+
+.search-btn {
+    padding: 10px 20px; /* ขยาย padding ของปุ่มค้นหาให้เท่ากับปุ่มอื่น */
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 36px; /* กำหนดความสูงของปุ่มให้เท่ากับช่องค้นหา */
+}
+
+.search-btn:hover {
+    background-color: #006400;
+}
